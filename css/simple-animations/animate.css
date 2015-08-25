@@ -1,0 +1,41 @@
+html{
+	font-family: sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+div{
+	font-weight:600;
+	font-size:48px;
+	color: white;
+	width:483px;
+	height:200px;
+	background: #009688 ;
+	transition: all 2s ease;
+	text-align:center;
+	line-height:200px;
+	margin-bottom:15px;
+}
+
+
+/* transition (properties, speed, accel/decel)*/
+
+/* setting line height equal to */
+
+.fade-in{
+	opacity: .3;
+}
+
+.fade-in:hover{
+	opacity: 1;
+}
+
+.fade-out{
+	opacity: 1;
+}
+
+.fade-out:hover{
+	opacity: .3;
+}
