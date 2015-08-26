@@ -1,0 +1,35 @@
+html{
+	font-family: sans-serif;
+}
+
+.square{
+	height:300px;
+	width:300px;
+	/*background: red;*/
+	overflow: hidden;
+}
+
+/* OVERFLOW IS SUPER IMPORTANT!*/
+/* overflow makes it so that if content within the parent container takes up more room than the parent can hold, the parent container hides the 'excess' content - to my understanding */
+
+img{
+	height:100%;
+	width:100%;
+	transition-property: -webkit-transform;
+	transition-duration: 1.2s;
+	transition-timing-function: ease;
+}
+
+img:hover{
+	/*transition-property: -webkit-transform;*/
+	/*transition-duration:1.2s;*/
+	/*transition-timing-function: ease;*/
+	-webkit-transform: scale(1.2);
+}
+
+
+.container{
+	position:relative;
+}
+
+
