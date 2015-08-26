@@ -35,7 +35,7 @@ i.e.
 	-webkit-transition: background-color 2s, -webkit-transform 2s;
 }
 
-.box:hover{
+.box.active:hover{
 	background-color: blue;
 	-webkit-transform: rotate(180deg);
 }
@@ -52,7 +52,7 @@ if you have more transition properties than transition durations listed or vice-
 	opacity: .3;
 }
 
-.fade-in:hover{
+.fade-in.active.active:hover{
 	opacity: 1;
 }
 
@@ -60,15 +60,15 @@ if you have more transition properties than transition durations listed or vice-
 	opacity: 1;
 }
 
-.fade-out:hover{
+.fade-out.active:hover{
 	opacity: .3;
 }
 
-.bg-color-change:hover{
+.bg-color-change.active:hover{
 	background-color: #FFC107;
 }
 
-.shrinkable:hover{
+.shrinkable.active:hover{
 	-webkit-transform: scale(.75);
 	-ms-transform: scale(.75);
 	-moz-transform: scale(.75);
@@ -81,7 +81,7 @@ if you have more transition properties than transition durations listed or vice-
 /* opera may actually use -o instead*/
 
 
-.expandable:hover{
+.expandable.active:hover{
 	-webkit-transform: scale(1.25);
 	-ms-transform: scale(1.25);
 	-moz-transform: scale(1.25);
@@ -97,7 +97,7 @@ if you have more transition properties than transition durations listed or vice-
 	font-size:14px;
 }
 
-#delay1:hover{
+#delay1.active:hover{
 	transition-property: font-size;
 	transition-duration: 4s;
 	transition-delay: 2s;
@@ -107,7 +107,7 @@ if you have more transition properties than transition durations listed or vice-
 this example performs a 4s with a 2s delay between mouse over and beginning of animation
 */
 
-.rotate:hover{
+.rotate.active:hover{
 	transition-property: -webkit-transform;
 	transition-duration: 2.5s;
 	transition-delay: 1s;
@@ -119,25 +119,25 @@ this example performs a 4s with a 2s delay between mouse over and beginning of a
 	for multiple 2d transforms, you do NOT need to separate the transforms by commas
 
 	i.e.
-	.shrinkwheel:hover{
+	.shrinkwheel.active:hover{
 		background-color: #FFC107;
 		-webkit-transform: scale(.25) rotate(360deg);
 	}
 */
-.rotink:hover{
+.rotink.active:hover{
 	background-color: #FFC107;
 	transition-delay: 1.2s;
 	-webkit-transform: scale(.25) rotate(360deg);
 }
 
-.box-circle:hover{
+.box-circle.active:hover{
 	border-radius: 50%;
 	height: 342px;
 	width: 342px;
 	-webkit-transform: ;
 }
 
-.circle:hover{
+.circle.active:hover{
 	border-radius: 50%;
 	height: 150px;
 	width:150px;
@@ -219,7 +219,7 @@ for your actual dom element, you simply have a css animation property like - ani
  you can make animations happen multiple times by specifying the number of iterations
 
  i.e.
- 	swing:hover{
+ 	swing.active:hover{
  		-webkit-animation: swing 1s ease;
  		animation: swing 1s ease;
  		-webkit-animation-iteration-count: 1;
@@ -231,7 +231,7 @@ for your actual dom element, you simply have a css animation property like - ani
 	for box shadows, the 5 base properties are 
 	box-shadow: type x-offset(unit) y-offset(unit) blur-radius(unit) spread-radius) color;
 */
-.frame:hover{
+.frame.active:hover{
 	box-shadow: inset 0 0 0 25px #FFECB3;
 }
 
