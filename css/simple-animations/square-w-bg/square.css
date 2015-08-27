@@ -36,14 +36,17 @@ img:hover{
 
 /*flip*/
 .flip-container {
-	perspective: 1000;
+	/*not sure if perspective is necessary, copied it originally from example at http://davidwalsh.name/css-flip */
+	/*perspective: 1000;*/
 	border:1px solid black;
 }
 	/* flip the pane when hovered */
+	/* my comment: upon hover, the flip container rotates, a class is also added though i don't see a .hover class anywhere..*/
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateY(180deg);
 	}
 
+	/*my comment: the flipper doesn't need to have a set dimension since it'll be as large as what's inside of it (front and back panel)*/
 .flip-container, .front, .back {
 	width: 300px;
 	height: 300px;
@@ -52,6 +55,7 @@ img:hover{
 /* flip speed goes here */
 .flipper {
 	transition: 1s;
+	/*need to have the preserve-3d, otherwise the front simply mirrors itself*/
 	transform-style: preserve-3d;
 
 	position: relative;
@@ -59,6 +63,9 @@ img:hover{
 
 /* hide back of pane during swap */
 .front, .back {
+	/* my comment:
+	from W3, The backface-visibility property defines whether or not an element should be visible when not facing the screen.
+	*/
 	backface-visibility: hidden;
 	border:1px solid red;
 	position: absolute;
@@ -68,6 +75,7 @@ img:hover{
 
 /* front pane, placed above back */
 .front {
+	/*my comment: z-index not necessary for chrome*/
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
@@ -78,5 +86,6 @@ img:hover{
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	/*my comment: i added overflow here in case i added excess content to the back panel*/
 	overflow:hidden;
 }
